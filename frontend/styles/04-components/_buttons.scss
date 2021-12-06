@@ -1,0 +1,69 @@
+.btn {
+	border-radius: 10px !important;
+	transition: 0.2s !important;
+	cursor: pointer;
+
+	&--small {
+		font-weight: 400 !important;
+		font-size: 16px !important;
+		padding: 0.5rem 0.8rem !important;
+		max-height: 42px;
+	}
+
+	&--large {
+		font-weight: 500 !important;
+		font-size: 16px !important;
+		width: 100%;
+	}
+
+	&--primary {
+		background-color: $routez-primary !important;
+		color: white!important;
+
+		&:hover {
+			background-color: $routez-primary-dark !important;
+		}
+	}
+
+	&--secondary {
+		background-color: $routez-secondary !important;
+		color: $routez-primary !important;
+
+		&:hover {
+			background-color: $routez-secondary-dark !important;
+		}
+	}
+
+	&--danger {
+		color: $routez-danger !important;
+		border: 1px solid $routez-danger !important;
+
+		&:hover {
+			color: white !important;
+			background-color: $routez-danger !important;
+		}
+	}
+	
+	&--danger-fill {
+		background-color: $routez-danger !important;
+		color: white !important;
+
+		&:hover {
+			color: white !important;
+			background-color: $routez-danger !important;
+		}
+	}
+
+	&--danger-secondary {
+		color: $routez-danger !important;
+
+		&:hover {
+			color: white !important;
+			background-color: $routez-danger !important;
+		}
+	}
+
+	&--auth {
+		margin-top: 10vh;
+	}
+}

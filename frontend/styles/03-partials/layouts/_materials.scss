@@ -1,0 +1,743 @@
+.material {
+	&-list {
+		margin: 4rem 0;
+
+		&-title {
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		&-item {
+			border-bottom: 1px solid rgba($routez-grey, .3);
+			padding: 1rem 0;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+	
+			&-left {
+				display: flex;
+				flex-direction: column;
+
+				&-bottom {
+					display: flex;
+					align-items: center;
+				}
+			}
+
+			&-right {
+				display: flex;
+				align-items: center;
+
+				&-delete {
+					display: flex;
+					align-items: center;
+					background-color: $routez-grey-light;
+					padding: 0.5rem 0.5rem 0.5rem 1rem;
+					border-radius: 50px;
+					cursor: pointer;
+
+					transition: 1s;
+
+					&__text {
+						font-size: 12px;
+						font-weight: 300;
+						margin: 0;
+					}
+				}
+			}
+
+			&-title a {
+				color: $routez-black;
+				font-size: 16px;
+				font-weight: 500;
+				text-decoration: none;
+
+				&:hover {
+					color: $routez-black;
+					text-decoration: underline;
+				}
+			}
+	
+			&-date {
+				color: $routez-black;
+				font-size: 13px;
+				font-weight: 300;
+				margin: 0;
+	
+				& a {
+					font-weight: 500;
+					color: $routez-black;
+					text-decoration: none;
+
+					&:hover {
+						color: $routez-black;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		&-warning {
+			font-size: 14px;
+			font-weight: 300;
+			opacity: 0.8;
+		}
+
+		&-more {
+			color: $routez-primary;
+			font-size: 14px;
+			padding-top: 1rem;
+
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&-cards {
+		display: flex;
+
+		& > .material-card:first-child {
+			margin-left: 0;
+		}
+
+		& > .material-card:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&-icon {
+		&__edit {
+			color: $routez-primary;
+			font-size: 1.4rem;
+			margin: 0 1rem;
+
+			transition: 0.3s;
+
+			&:hover {
+				cursor: pointer;
+				color: $routez-primary-dark;
+			}
+		}
+
+		&__delete {
+			color: $routez-danger;
+			font-size: 1.4rem;
+			margin: 0 1rem;
+
+			transition: 0.3s;
+
+			&--fill {
+				color: white !important;
+				background-color: $routez-danger;
+				border-radius: 50%;
+				padding: 4px;
+				margin-right: 0;
+
+				&:hover {
+					color: white;
+					cursor: pointer;
+					background-color: $routez-danger-dark;
+				}
+			}
+
+			&:hover {
+				cursor: pointer;
+				color: $routez-danger-dark;
+			}
+		}
+	}
+}
+
+.material {
+	padding: 1rem 3rem;
+
+	&-buttons {
+		display: flex;
+		justify-content: end;
+
+		margin-top: 1rem;
+		
+		& > a:first-child {
+			margin-right: 1rem;
+		}
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+	
+		/* position: absolute;
+		z-index: 1; */
+
+		&-search {
+
+			&__input {
+				background-color: $routez-grey-light;
+				border: 1px solid $routez-grey-light;
+				color: $routez-black;
+				font-weight: 400;
+				font-size: 14px;
+				border-radius: 10px;
+
+				height: 42px;
+				padding: 0.5rem 0.8rem;
+				width: 100%;
+				max-width: 300px;
+
+				&:focus {
+					outline: none;
+					border: 1px solid $routez-primary;
+				}
+			}
+
+			&__icon {
+				background-color: $routez-primary;
+				color: white;
+				height: 48px;
+				width: 48px;
+				border-radius: 0 5px 5px 0;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $routez-primary-dark;
+				}
+			}
+		}
+
+		&-filters {
+			display: flex;
+
+			&-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 1rem 0;
+
+				& > .btn:first-child {
+					margin: 1rem;
+				}
+			}
+		}
+	}
+
+	&-content {
+		margin-top: 2rem;
+	}
+
+	&-detail {
+		display: flex;
+		justify-content: space-between;
+	
+		&-right {
+			border-left: 1px solid rgba($routez-grey, 0.3);
+			padding: 2rem;
+
+			&-title {
+				font-size: 18px;
+				font-weight: 500;
+			}
+			
+			&-profile {
+				display: flex;
+	
+				border-radius: 10px;
+				padding: 0.5rem 0;
+				margin: 1rem 0;
+				transition: all 0.3s;
+				cursor: pointer;
+				text-decoration: none;
+			
+				&__text {
+					font-size: 12px;
+			
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: left;
+			
+					&-name {
+						font-weight: 600;
+						margin: 0;
+					}
+	
+					&-settings {
+						font-weight: 300;
+						margin: 0;
+					}
+				}
+	
+				&__image {
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					margin-right: 1rem;
+				}
+			}
+
+			&-download {
+				background-color: $routez-grey-light;
+				border-radius: 10px;
+				padding: 1rem;
+
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				transition: 0.3s;
+
+				&-title {
+					font-weight: 600;
+					font-size: 14px;
+					margin-bottom: 0.4rem;
+				}
+
+				&-text {
+					font-size: 12px;
+
+					&__name, &__data {
+						margin: 0;
+					}
+
+					&__name {
+						font-weight: 600;
+					}
+				}
+
+				&:hover {
+					cursor: pointer;
+					background-color: $routez-grey-light-dark;
+				}
+			}
+
+			&-likes {
+				display: flex;
+				align-items: center;
+				margin: 1rem 0;
+				margin-bottom: 2rem;
+
+				& .material-icon-heart-wrapper {
+					margin-left: 0;
+				}
+
+				&__text {
+					font-size: 12px;
+					margin: 0;
+				}
+			}
+
+			&-tags {
+				display: flex;
+				flex-wrap: wrap;
+
+				&__item {
+					background-color: rgba($routez-secondary, 0.5);
+					border-radius: 5px;
+
+					position: relative;
+					padding: 0.2rem 0.8rem;
+					margin: 0.25rem;
+				}
+			}
+		}
+
+		&-title {
+			font-size: 36px;
+			font-weight: 600;
+			font-family: $font-family-secondary;
+
+			&-wrapper {
+				display: flex;
+				align-items: center;
+				margin-bottom: 2rem;
+			}
+		}
+
+		&-text {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+	&-icon {
+		&__download {
+			color: $routez-primary;
+			font-size: 1.6rem;
+
+			&:hover {
+				color: $routez-primary-dark;
+				cursor: pointer;
+			}
+		}
+
+		&-heart {
+			font-size: 1.4rem;
+			color: $routez-grey;
+			transition: 0.3s;
+	
+			&-wrapper {
+				background-color: $routez-grey-light;
+				height: 36px;
+				width: 36px;
+				border-radius: 50%;
+
+				margin: 0 1rem;
+				
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				transition: 0.3s;
+
+				&--number {
+					display: flex;
+					align-items: center;
+
+					& p {
+						margin: 0;
+						font-size: 14px;
+						font-weight: 600;
+					}
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+
+				&:hover > .material-icon-heart {
+					color: $routez-primary;
+				}
+
+				&:hover > .material-icon-heart--fill {
+					color: $routez-primary-dark;
+				}
+			}
+			
+			&--fill {
+				color: $routez-primary;
+			}
+		}
+	}
+
+	&-recommended {
+		&-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			margin: 2rem 0;
+
+			&-buttons {
+				display: flex;
+				
+				& > a:first-child {
+					margin-right: 1rem;
+				}
+			}
+
+			& p {
+				font-weight: 500;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+/********************************* SEARCH RESULTS PAGE *********************************/
+.search {
+	padding: 3rem;
+
+	&-right {
+		&-indicator {
+			padding: 0.6rem 1rem 1rem;
+			border-bottom: 1px solid rgba($routez-grey, 0.3);
+		}
+
+		&-results {
+			&-item {
+				padding: 1rem;
+				border-bottom: 1px solid rgba($routez-grey, 0.3);
+
+				& > button {
+					margin: 0.4rem 0;
+				}
+				&__title {
+					font-size: 16px;
+					font-weight: 600;
+
+					&::first-letter {
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+
+	&-left {
+		display: flex;
+		justify-content: center;
+
+		&-form {
+			&-input {
+				border: 1px solid $routez-grey-light;
+				background-color: $routez-grey-light;
+				color: $routez-black;
+				font-weight: 400;
+				font-size: 14px;
+				border-radius: 10px;
+
+				height: 42px;
+				padding: 0.5rem 0.8rem;
+				
+				&:focus {
+					border: 1px solid $routez-primary;
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/********************************* CREATE MATERIAL PAGE *********************************/
+.create-material {
+	padding: 1rem 3rem;
+
+	&__title {
+		font-size: 36px;
+		font-weight: 600;
+		font-family: $font-family-secondary;
+		margin-bottom: 3rem;
+	}
+
+	&__label {
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+	}
+
+	&__upload-text {
+		background-color: $routez-grey-light;
+		display: inline-block;
+		padding: 10px 20px;
+		border-radius: 10px;
+		margin-top: 20px;
+		font-size: $font-size-s;
+	}
+
+	&__upload-button {
+		background-color: $routez-primary !important;
+		color: white!important;
+		font-weight: 400 !important;
+		font-size: 16px !important;
+		padding: 0.5rem 0.8rem !important;
+		max-height: 42px;
+		border-radius: 10px !important;
+		transition: 0.2s !important;
+		cursor: pointer;
+		display: inline-flex;
+		position: relative;
+		align-items: center;
+
+		svg {
+			margin-left: 0.5rem;
+			font-size: 1.2rem;
+		}
+
+		span {
+			color: white;
+		}
+
+		input {
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+		&:hover {
+			background-color: $routez-primary-dark !important;
+		}
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+
+		&__label {
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 0.5rem;
+		}
+
+		&__input {
+			border: 1px solid rgba($routez-grey, 0.3);
+			border-radius: 5px;
+			font-weight: 300;
+			font-size: 14px;
+
+			padding: 0.2rem 0.8rem;
+			margin-bottom: 2rem;
+			max-width: 500px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&-buttons {
+		margin-top: 3rem;
+
+		& > .btn:first-child {
+			margin-right: 1rem;
+		}		
+	}
+
+	&__error {
+		color: $routez-danger;
+		font-size: 16px;
+		background-color: rgba($routez-danger, 0.1);
+		border-radius: 10px;
+
+		padding: 1rem;
+		margin: 3rem 0 1rem;
+	}
+}
+
+
+
+
+
+
+/********************************* EDIT MATERIAL PAGE *********************************/
+.edit-material {
+	padding: 1rem 3rem;
+
+	&__title {
+		font-size: 36px;
+		font-weight: 600;
+		font-family: $font-family-secondary;
+		margin-bottom: 3rem;
+	}
+
+	&__label {
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+
+		&__label {
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 0.5rem;
+		}
+
+		&__input {
+			border: 1px solid rgba($routez-grey, 0.3);
+			border-radius: 5px;
+			font-weight: 300;
+			font-size: 14px;
+
+			padding: 0.2rem 0.8rem;
+			margin-bottom: 2rem;
+			max-width: 500px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&-file {
+			background-color: $routez-grey-light;
+			border-radius: 10px;
+
+			max-width: 500px;
+			padding: 1rem;
+			margin: 1rem 0;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			transition: 0.3s;
+
+			&-title {
+				font-weight: 600;
+				font-size: 14px;
+				margin-bottom: 0.4rem;
+			}
+
+			&-text {
+				font-size: 12px;
+
+				&__name, &__data {
+					margin: 0;
+				}
+
+				&__name {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&-buttons {
+		margin-top: 3rem;
+
+		& > .btn:first-child {
+			margin-right: 1rem;
+		}		
+	}
+}
+
+.react-tooltip {
+	-webkit-box-shadow: 0px 0px 21px -1px rgba(54,57,65,0.19);
+	-moz-box-shadow: 0px 0px 21px -1px rgba(54,57,65,0.19);
+	box-shadow: 0px 0px 21px -1px rgba(54,57,65,0.19);
+
+	background-color: white !important;
+	opacity: 0.95 !important;
+	border-radius: 5px !important;
+
+	&__email {
+		display: flex;
+		align-items: center;
+		margin: 0;
+
+		& > svg {
+			margin-right: 8px;
+		}
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		margin-top: 0.5rem;
+
+		& > svg {
+			margin-right: 8px;
+		}
+	}
+}

@@ -1,0 +1,132 @@
+.auth {
+	&.container {
+		margin: 0;
+		max-width: 100vw;
+	}
+
+	&-left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: $routez-secondary;
+		height: 100vh;
+		border-radius: 0 30px 30px 0;
+
+		&-frame {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			background-color: white;
+			height: 30vw;
+			width: 30vw;
+			border-radius: 12px;
+
+			&__image {
+				max-width: 70%;
+				max-height: 70%;
+			}
+		}
+	}
+
+	&-right {
+		display: flex;
+		flex-direction: column;
+
+		height: 100vh;
+
+		&-logo {
+			width: 40%;
+			margin: 2rem 0 0 2rem;
+		}
+	}
+}
+
+/********************* FORM *********************/
+.auth-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	height: 100%
+}
+
+.auth-content__error {
+	color: $routez-danger;
+	font-size: 16px;
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-family: $font-family-base !important;
+	width: 100%;
+	padding: 1rem;
+
+	&-input {
+		margin: 1rem;
+		width: 100%;
+	}
+
+	&-link {
+		color: $routez-black;
+		text-decoration: none;
+		font-size: 14px;
+		opacity: 0.8;
+		transition: 0.2s;
+
+		&--bottom {
+			margin-bottom: 10vh;
+		}
+
+		&--top {
+			margin-top: 1rem;
+			text-align: center;
+		}
+
+		& b {
+			color: $routez-black;
+		}
+
+		&:hover {
+			opacity: 1;
+			color: $routez-black;
+		}
+	}
+
+	&-restrictions {
+		margin-top: 10vh;
+		margin-bottom: 1rem;
+		&-text {
+			font-size: 14px;
+			font-weight: 400;
+			color: $routez-grey;
+			margin: 1rem;
+
+		& b {
+			color: $routez-black;
+		}
+		}
+	}
+}
+
+.form-input.sendreset-input {
+	margin: 2rem 0 6rem 0;
+}
+
+/********************* MEDIA QUERIES *********************/
+@media (max-width: 767.98px) { 
+	.auth-left {
+		display: none;
+	}
+
+	.auth-right {
+		height: 100vh;
+	}
+}
