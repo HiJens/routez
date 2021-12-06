@@ -8,10 +8,6 @@ import {
     useState
 } from "react";
 
-import { 
-    useHistory, 
-} from "react-router";
-
 import {
     Config
 } from "../../../lib";
@@ -35,7 +31,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const Pages = () => {
-    const history = useHistory();
     const showHTML = new showdown.Converter();
 
     const [ module, setModule ] = useState();
